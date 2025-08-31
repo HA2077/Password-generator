@@ -40,7 +40,7 @@ Here’s a glimpse of what’s coming next:
 
 ✅ Expanded symbol set
 
-Character type selection (choose letters, numbers, symbols)
+✅ Character type selection (choose letters, numbers, symbols)
 
 Switch from random → secrets for stronger security
 

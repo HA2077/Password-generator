@@ -1,4 +1,4 @@
-import random
+import secrets
 
 def User_preferences():
     while True:
@@ -14,8 +14,8 @@ def User_preferences():
 def Passgen(Length, UseLowercase, UseUppercase, UseSymbol, UseNumber, Lowercase, Uppercase, Symbol, Number):
     password_chars = []
     for i in range(Length):
-        password_chars.append(random.choice((UseLowercase*Lowercase) + (UseUppercase*Uppercase) + (UseSymbol*Symbol) + (UseNumber*Number)))
-    random.shuffle(password_chars)
+        password_chars.append(secrets.choice((UseLowercase*Lowercase) + (UseUppercase*Uppercase) + (UseSymbol*Symbol) + (UseNumber*Number)))
+    secrets.SystemRandom().shuffle(password_chars)
     return ''.join(password_chars)
 
 def Improve_password(password, use_lowercase, use_uppercase, use_symbol, use_number, Lowercase, Uppercase, Symbol, Number):
@@ -26,10 +26,10 @@ def Improve_password(password, use_lowercase, use_uppercase, use_symbol, use_num
     has_number = any(c.isdigit() for c in password_list)
     
     replacements = []
-    if use_lowercase and not has_lowercase: replacements.append(random.choice(Lowercase))
-    if use_uppercase and not has_uppercase: replacements.append(random.choice(Uppercase))
-    if use_symbol and not has_symbol: replacements.append(random.choice(Symbol))
-    if use_number and not has_number: replacements.append(random.choice(Number))
+    if use_lowercase and not has_lowercase: replacements.append(secrets.choice(Lowercase))
+    if use_uppercase and not has_uppercase: replacements.append(secrets.choice(Uppercase))
+    if use_symbol and not has_symbol: replacements.append(secrets.choice(Symbol))
+    if use_number and not has_number: replacements.append(secrets.choice(Number))
 
     for i, replacement in enumerate(replacements):
         if i < len(password_list):
@@ -67,7 +67,7 @@ while True:
         print("Password length should not exceed 32 characters.")
     else:
         UseLowercase, UseUppercase, UseSymbol, UseNumber = User_preferences()
-        password = Passgen(Length, Lowercase, Uppercase, Symbol, Number, UseLowercase, UseUppercase, UseSymbol, UseNumber)
+        password = Passgen(Length, UseLowercase, UseUppercase, UseSymbol, UseNumber, Lowercase, Uppercase, Symbol, Number)
         password = Improve_password(password, UseLowercase, UseUppercase, UseSymbol, UseNumber, Lowercase, Uppercase, Symbol, Number)
         print("Generated Password: " + password)
 

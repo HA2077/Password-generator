@@ -1,4 +1,5 @@
 import secrets
+import pyperclip
 
 def User_preferences():
     while True:
@@ -50,6 +51,8 @@ while True:
         UseLowercase, UseUppercase, UseSymbol, UseNumber = User_preferences()
         password = Passgen(Length, UseLowercase, UseUppercase, UseSymbol, UseNumber, Lowercase, Uppercase, Symbol, Number)
         print("Generated Password: " + password)
+        pyperclip.copy(password)
+        print("----------> Password copied to clipboard <----------")
 
     print("Do you want to generate another password? (yes/no)")
     if input().lower() != "yes":

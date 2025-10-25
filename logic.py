@@ -32,26 +32,3 @@ def Passgen(Length, UseLowercase, UseUppercase, UseSymbol, UseNumber, Lowercase,
     Passwordchars = list(passwordSET)
     secrets.SystemRandom().shuffle(Passwordchars)
     return ''.join(Passwordchars)
-
-print ("The password generator")
-while True:
-    Length = int(input("Enter the length of the password (min 8 characters & max 32 characters): "))
-    Lowercase = "abcdefghijklmnopqrstuvwxyz"
-    Uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    Symbol = "!@#$%^&*()_+-=[]{}|;:,.<>?/~"
-    Number = "0123456789"
-
-    password_chars = []
-    if Length < 8:
-        print("Password length should be at least 8 characters.")
-    elif Length > 32:
-        print("Password length should not exceed 32 characters.")
-    else:
-        UseLowercase, UseUppercase, UseSymbol, UseNumber = User_preferences()
-        password = Passgen(Length, UseLowercase, UseUppercase, UseSymbol, UseNumber, Lowercase, Uppercase, Symbol, Number)
-        print("Generated Password: " + password)
-
-    print("Do you want to generate another password? (yes/no)")
-    if input().lower() != "yes":
-        print ("--- Thank you for using the program ---")
-        break

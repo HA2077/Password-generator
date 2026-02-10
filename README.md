@@ -1,9 +1,5 @@
 # 🔐 Password Generator  
 
-![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python&logoColor=white)  
-![Status](https://img.shields.io/badge/Status-In%20Development-yellow)  
-![Security](https://img.shields.io/badge/Security-Strong-green)  
-
 A simple **Python program** that generates strong, random passwords using:  
 
 - 🔡 Lowercase letters  
@@ -27,31 +23,21 @@ Perfect when you need a **quick and secure password**.
 
 1. Clone this repo 📂 
    git clone https://github.com/HA2077/password-generator.git
+
    cd password-generator
 
-2. Run the program with Python 3 🐍
+3. Run the program with Python 3 🐍
+   
     python3 Program.py
 
-3. Enter your desired password length (8–32 characters)
+4. Enter your desired password length (8–32 characters)
 
 ---
 
-🛠️ Roadmap
+# ⚠️ ARCHIVED: Prototype Logic
 
-This project is still in development 🚧.
-Here’s a glimpse of what’s coming next:
+> **Moved to Production:** The full browser extension version of this project is now being developed here: **[HA's Password Locker]([LINK_TO_NEW_REPO](https://github.com/HA2077/HA-s-Password-Locker))**.
 
-✅ Expanded symbol set
-
-✅ Character type selection (choose letters, numbers, symbols)
-
-✅ Switch from random → secrets for stronger security
-
-A GUI
-
-And more 🔥🔥
-
-Stay tuned for upgrades 🚀
+This repository contains the initial Python algorithm. The active project uses JavaScript and the Web Crypto API.
 
 ---
-

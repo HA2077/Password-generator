@@ -36,7 +36,7 @@ Perfect when you need a **quick and secure password**.
 
 # ⚠️ ARCHIVED: Prototype Logic
 
-> **Moved to Production:** The full browser extension version of this project is now being developed here: **[HA's Password Locker]([LINK_TO_NEW_REPO](https://github.com/HA2077/HA-s-Password-Locker))**.
+**Moved to Production:** The full browser extension version of this project is now being developed here: **[HA's Password Locker]([LINK_TO_NEW_REPO](https://github.com/HA2077/HA-s-Password-Locker))**.
 
 This repository contains the initial Python algorithm. The active project uses JavaScript and the Web Crypto API.
 
